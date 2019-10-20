@@ -1,9 +1,9 @@
 from datetime import datetime
-from flask import render_template, flash, url_for, redirect, request
+from flask import render_template, flash, redirect, url_for, request
+from flask_login import login_user, logout_user, current_user, login_required
+from werkzeug.urls import url_parse
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm
-from flask_login import current_user, login_user, logout_user, login_required
-from werkzeug.urls import url_parse
 from app.models import User
 
 @app.before_request
@@ -16,7 +16,6 @@ def before_request():
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'Yehudis'}
     posts = [
         {
             'author':{'username': 'John'},
@@ -58,7 +57,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
-        user = set_password(form.password.data)
+        user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
@@ -78,7 +77,7 @@ def user(username):
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
-    form = EditProfileForm()
+    form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
