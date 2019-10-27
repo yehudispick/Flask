@@ -1,4 +1,4 @@
-# Translations template for PROJECT.
+# Hebrew translations for PROJECT.
 # Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-24 18:54-0400\n"
+"POT-Creation-Date: 2019-10-26 21:23-0400\n"
 "PO-Revision-Date: 2019-10-24 20:05-0400\n"
+"Last-Translator: \n"
+"Language: he\n"
 "Language-Team: \n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ?"
+" 2 : 3)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 2.2.4\n"
-"Last-Translator: \n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
-"Language: he\n"
 
 #: app/__init__.py:22
 msgid "Please log in to access this page."
@@ -39,7 +39,7 @@ msgstr "סיסמה"
 msgid "Remember Me"
 msgstr "זכור אותי"
 
-#: app/forms.py:11 app/routes.py:65 app/templates/login.html:5
+#: app/forms.py:11 app/routes.py:70 app/templates/login.html:5
 msgid "Sign In"
 msgstr "היכנס"
 
@@ -51,7 +51,7 @@ msgstr "אימייל"
 msgid "Repeat Password"
 msgstr "חזור על הסיסמה"
 
-#: app/forms.py:19 app/routes.py:84 app/templates/register.html:5
+#: app/forms.py:19 app/routes.py:89 app/templates/register.html:5
 msgid "Register"
 msgstr "הירשם"
 
@@ -79,65 +79,73 @@ msgstr "תגיד משהו"
 msgid "Request Password Reset"
 msgstr "בקש איפוס סיסמה"
 
-#: app/routes.py:27
+#: app/routes.py:32
 msgid "Your post is now live!"
 msgstr "ההודעה שלך עכשיו בשידור חי!"
 
-#: app/routes.py:36
+#: app/routes.py:41
 msgid "Home Page"
 msgstr "דף הבית"
 
-#: app/routes.py:48 app/templates/base.html:22
+#: app/routes.py:53 app/templates/base.html:22
 msgid "Explore"
 msgstr "חקור"
 
-#: app/routes.py:58
+#: app/routes.py:63
 msgid "Invalid username or password"
 msgstr "שם משתמש או סיסמא לא חוקיים"
 
-#: app/routes.py:82
+#: app/routes.py:87
 msgid "Congratulations, you are now a registered user!"
 msgstr "מזל טוב, אתה משתמש רשום עכשיו!"
 
-#: app/routes.py:108
+#: app/routes.py:113
 msgid "Your changes have been saved."
 msgstr "השינויים שלך נשמרו."
 
-#: app/routes.py:113 app/templates/edit_profile.html:5
+#: app/routes.py:118 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "ערוך פרופיל"
 
-#: app/routes.py:120 app/routes.py:135
+#: app/routes.py:125 app/routes.py:140
 msgid "User %{username}s not found."
 msgstr "המשתמש% {username} s לא נמצא."
 
-#: app/routes.py:123
+#: app/routes.py:128
 msgid "You cannot follow yourself!"
 msgstr "אתה לא יכול לעקוב אחרי עצמך!"
 
-#: app/routes.py:127
+#: app/routes.py:132
 msgid "You are following %{username}s"
 msgstr "אתה עוקב אחר% {username} s"
 
-#: app/routes.py:138
+#: app/routes.py:143
 msgid "You cannot unfollow yourself!"
 msgstr "אינך יכול לפתוח את עצמך!"
 
-#: app/routes.py:142
+#: app/routes.py:147
 msgid "You are not following %{username}s"
 msgstr "אינך עוקב אחר% {username} s"
 
-#: app/routes.py:154
+#: app/routes.py:159
 msgid "Check your email for the instructions to reset your password"
 msgstr "בדוק בדוא\"ל שלך את ההוראות לאיפוס הסיסמה שלך"
 
-#: app/routes.py:156 app/templates/reset_password_request.html:5
+#: app/routes.py:161 app/templates/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "לאפס את הסיסמה"
 
-#: app/routes.py:169
+#: app/routes.py:174
 msgid "Your password has been reset."
 msgstr "הסיסמה שלך אופסה."
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:16
+msgid "Error: the translation service failed."
+msgstr ""
 
 #: app/templates/404.html:4
 msgid "File Not Found"
@@ -160,6 +168,10 @@ msgstr "מנהל המערכת קיבל הודעה. מצטער על אי הנוח
 msgid "%(username)s said %(when)s"
 msgstr "%(username) s אמר%(when) s"
 
+#: app/templates/_post.html:25
+msgid "Translate"
+msgstr ""
+
 #: app/templates/base.html:4
 msgid "Welcome to  Microblog!"
 msgstr "ברוך הבא ל- Microblog!"
@@ -179,6 +191,10 @@ msgstr "פרופיל"
 #: app/templates/base.html:29
 msgid "Logout"
 msgstr "להתנתק"
+
+#: app/templates/base.html:68
+msgid "Error: Could not contact server."
+msgstr ""
 
 #: app/templates/index.html:5
 #, python-format
@@ -242,3 +258,4 @@ msgstr "לעקוב אחר"
 #: app/templates/user.html:18
 msgid "Unfollow"
 msgstr "בטל את המעקב"
+
