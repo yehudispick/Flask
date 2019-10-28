@@ -17,4 +17,5 @@ class Config(object):
     ADMINS = ['pickyehudis@gmail.com']
     POSTS_PER_PAGE = 25
     LANGUAGES =['en', 'es','he']
-    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+    YANDEX_TRANSLATOR_KEY  = os.environ.get('YANDEX_TRANSLATOR_KEY')
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
